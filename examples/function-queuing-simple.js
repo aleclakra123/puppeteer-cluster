@@ -4,6 +4,7 @@ const { Cluster } = require('../dist');
     const cluster = await Cluster.launch({
         concurrency: Cluster.CONCURRENCY_CONTEXT,
         maxConcurrency: 2,
+        monitor: true
     });
 
     // We don't define a task and instead queue individual functions
